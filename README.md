@@ -2,7 +2,7 @@
 
 The project is a single-page application for managing a list of books. The main page displays a list of books, each showing the book's name, price, category, and a delete button. Users can add, modify, or remove books.
 
-You can view a [hosted Demo here](https://github.com){:target="_blank"}
+You can view a [hosted Demo here](https://github.com)
 
 Folders of interest:
 
