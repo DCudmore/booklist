@@ -1,10 +1,11 @@
 export { Page }
 import './index.css'
+import Booklist from "../../components/Booklist";
 
 function Page() {
   return (
     <>
-      <h1>Welcome</h1>
+      <Booklist />
     </>
   )
 }

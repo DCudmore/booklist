@@ -1,12 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import initialBookData from "./bookData.json";
-type Book =  {
-    id: number;
-    name: string;
-    price: number;
-    category: string;
-    description: string;
-}
+import { Book } from "../../types/types";
 
 interface BooksState {
     value: Book[];
@@ -16,8 +10,8 @@ const initialState: BooksState = {
     value: initialBookData,
 };
 
-const counterSlice = createSlice({
-    name: "counter",
+const bookSlice = createSlice({
+    name: "books",
     initialState,
     reducers: {
         addBook: (state, action) => {
@@ -29,6 +23,6 @@ const counterSlice = createSlice({
     },
 });
 
-export const { addBook, removeBook } = counterSlice.actions;
+export const { addBook, removeBook } = bookSlice.actions;
 
-export default counterSlice.reducer;
+export default bookSlice.reducer;
