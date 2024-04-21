@@ -1,9 +1,9 @@
 import { render, screen, waitFor } from '@testing-library/react';
-import BookList from '../components/BookList';
-import user from '@testing-library/user-event';
 import { Provider } from "react-redux";
 import { store } from "../state/store.ts";
+import user from '@testing-library/user-event';
 import '@testing-library/jest-dom'
+import BookList from '../components/BookList';
 
 describe('BookList - Component test', () => {
 

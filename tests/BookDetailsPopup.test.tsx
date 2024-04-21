@@ -1,11 +1,9 @@
-// testing if book details popup works to update or add a new book to redux store
-
 import { render, screen, waitFor } from '@testing-library/react';
-import BookDetailsPopup from '../components/BookDetailsPopup';
-import user from '@testing-library/user-event';
 import { Provider } from "react-redux";
 import { store } from "../state/store.ts";
+import user from '@testing-library/user-event';
 import '@testing-library/jest-dom'
+import BookDetailsPopup from '../components/BookDetailsPopup';
 
 describe('BookDetailsPopup - Component test', () => {
 
