@@ -10,7 +10,7 @@ import '@testing-library/jest-dom'
 describe('BookDetailsPopup - Component test', () => {
 
     it('can add a book', async () => {
-        render(<Provider store={store}><BookDetailsPopup book={null} /></Provider>)
+        render(<Provider store={store}><BookDetailsPopup book={null} hideOverlay={() => {}} /></Provider>)
 
         // get initial length of store
         const initialStoreItems = store.getState().books.value.length
@@ -23,11 +23,11 @@ describe('BookDetailsPopup - Component test', () => {
 
         await user.type(nameInput, 'New book title')
         await user.type(priceInput, '10')
-        await user.type(categoryInput, 'Fantasy')
+        await user.selectOptions(categoryInput, 'Business')
         await user.type(descriptionInput, 'A fantastic book')
-
+        
         // submit the form
-        const submitButton = screen.getByRole('button', { name: /add book/i })
+        const submitButton = screen.getByRole('button', { name: /submit/i })
         user.click(submitButton)
 
         // check that the book was added to the store
@@ -39,7 +39,7 @@ describe('BookDetailsPopup - Component test', () => {
     it('can update a book', async () => {
         // get first item from store
         const firstBook = store.getState().books.value[0]
-        render(<Provider store={store}><BookDetailsPopup book={firstBook} /></Provider>)
+        render(<Provider store={store}><BookDetailsPopup book={firstBook} hideOverlay={() => {}}/></Provider>)
 
         // fill out the input fields
         const nameInput = screen.getByLabelText('Name')
@@ -49,11 +49,11 @@ describe('BookDetailsPopup - Component test', () => {
 
         await user.type(nameInput, " updated")
         await user.type(priceInput, String(firstBook.price))
-        await user.type(categoryInput, firstBook.category)
+        await user.selectOptions(categoryInput, 'Business')
         await user.type(descriptionInput, firstBook.description)
 
         // submit the form
-        const submitButton = screen.getByRole('button', { name: /update book/i })
+        const submitButton = screen.getByRole('button', { name: /submit/i })
 
         // check that button exists
         expect(submitButton).toBeInTheDocument()
