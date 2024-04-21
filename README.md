@@ -37,3 +37,4 @@ This app was built with the following in mind:
 * Uses Redux and Redux Toolkit
 * Tests cover the main functionality of adding, removing, and editing book items
 * While there are minimal tests and types for this small project, I structured the app in a way that I feel like is scalable if the app was extended further
+* The app features a basic Github actions workflow to deploy to Github Pages
