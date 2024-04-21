@@ -5,6 +5,8 @@
     "target": "ES2020",
     // Doesn't apply to server/, see ts-node config down below and server/tsconfig.json
     "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["vite/client"],
     "jsx": "react-jsx",
