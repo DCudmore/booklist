@@ -4,7 +4,9 @@ import { UserConfig } from 'vite'
 
 const config: UserConfig = {
   base: '/booklist/',
-  plugins: [react(), vike()]
+  plugins: [react(), vike({
+    prerender: true
+  })]
 }
 
 export default config
