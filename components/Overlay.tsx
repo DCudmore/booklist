@@ -1,11 +1,11 @@
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
 export default function Overlay({ hideOverlay, children }: { hideOverlay: () => void, children: React.ReactNode }) {
 
     const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Escape') {
           // "Escape" key pressed, hide overlay
-          hideOverlay();
+          hideOverlay()
         }
       };
     

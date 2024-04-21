@@ -5,6 +5,7 @@ import BookItem from "./BookItem";
 
 const BookList = () => {
     const books = useSelector((state: RootState) => state.books.value);
+    
     return (
         <div id="book-list-container">
             {books.length > 0 ?
@@ -21,7 +22,7 @@ const BookList = () => {
                     ))}
                 </ul>
                 :
-                <p>No books found</p>
+                <p id="no-books-found">{"No books found. Click 'Add Book' to add a new book"}</p>
             }
         </div>
     );

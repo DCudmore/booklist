@@ -10,14 +10,14 @@
         "id": 2,
         "name": "Blackjack: Beat the Odds and Win Big",
         "price": 20,
-        "category": "Card Games",
+        "category": "Education",
         "description": "Unlock the secrets to becoming a Blackjack pro with this comprehensive guide. Learn advanced strategies, card counting techniques, and expert tips to beat the house and win big at the Blackjack table. Whether you're a novice or a seasoned player, Mastering Blackjack will help you elevate your game and maximize your profits."
     },
     {
         "id": 3,
         "name": "Solitaire Success: Strategies for Mastering the Card Game",
         "price": 12,
-        "category": "Card Games",
+        "category": "History",
         "description": "Unlock the secrets to becoming a Solitaire champion with 'Solitaire Success: Strategies for Mastering the Card Game.' Learn various Solitaire variations, advanced strategies, and expert tips to improve your gameplay and win more often. Whether you're a casual player or a Solitaire enthusiast, this comprehensive guide will help you enhance your skills and enjoy hours of fun."
     },
     {

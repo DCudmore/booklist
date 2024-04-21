@@ -10,6 +10,13 @@
     overflow: auto;
 }
 
+#no-books-found {
+    margin-left: 20px;
+    color:#9980FA;
+    font-weight: bold;
+    text-align: center;
+}
+
 #book-list {
     list-style: none;
     padding: 0;
@@ -64,6 +71,14 @@
 .book-category {
     flex-basis: 20%;
     text-align: center;
+}
+
+.book-category-item {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 0.8rem;
 }
 
 .book-actions {
@@ -133,6 +148,12 @@ button {
 }
 
 /* for book details popup */
+.error {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
 .update-book-heading {
     text-align: center;
     color:#484a4c;
@@ -145,7 +166,7 @@ button {
     padding: 1rem;
 }
 
-.book-details-form input, .book-details-form textarea {
+.book-details-form input, .book-details-form select, .book-details-form textarea {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -177,4 +198,33 @@ button {
 
 .book-details-form button {
     font-size: 1.2rem;
+}
+
+/* media queries for mobile */
+
+@media only screen and (max-width: 600px) {
+    .book-list-item:first-child {
+        display: none;
+    }
+
+    .book-name {
+        flex-basis: 100%;
+        width: 100%;
+        font-weight:bold;
+    }
+
+    .book-price {
+        flex-basis: 100%;
+        width: 100%;
+        text-align: left;
+        padding:0.5rem 0.5rem 0.5rem 0;
+    }
+
+    .book-category {
+        flex-basis: 40%;
+    }
+
+    .book-actions {
+        flex-basis: 40%;
+    }
 }
