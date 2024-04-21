@@ -3,6 +3,7 @@ import vike from 'vike/plugin'
 import { UserConfig } from 'vite'
 
 const config: UserConfig = {
+  base: '/booklist/',
   plugins: [react(), vike()]
 }
 
