@@ -10,23 +10,21 @@ const BookItem = ({ book }: { book: Book }) => {
     const dispatch = useDispatch<AppDispatch>();
 
     const handleRemoveBook = () => {
-        console.log('handleRemoveBook', book)
         dispatch(removeBook(book.id))
     }
 
     return (
         <>
-        <div>
-            <div onClick={() => setShowBookDetails(true)}>{book.name}</div>
-            <div>{book.price}</div>
-            <div>{book.category}</div>
-            <div>{book.description}</div>
-            <div>
-                <button onClick={handleRemoveBook}>Remove</button>
+        <li className='book-list-item'>
+            <div className="book-name" onClick={() => setShowBookDetails(true)}>{book.name}</div>
+            <div className="book-price">${book.price.toFixed(2)}</div>
+            <div className="book-category">{book.category}</div>
+            <div className='book-actions'>
+                <button onClick={handleRemoveBook} aria-label="Remove book" className='delete-book'>Remove</button>
             </div>
-        </div>
+        </li>
 
-        {showBookDetails && <BookDetailsPopup book={book} />}
+        {showBookDetails && <BookDetailsPopup book={book} hideOverlay={() => setShowBookDetails(false)} />}
         </>
     )
 }

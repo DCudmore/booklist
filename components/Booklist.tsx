@@ -5,13 +5,21 @@ import BookItem from "./BookItem";
 
 const BookList = () => {
     const books = useSelector((state: RootState) => state.books.value);
-    console.log('books in booklist', books)
     return (
-        <div>
+        <div id="book-list-container">
             {books.length > 0 ?
-                books.map((book: Book) => (
-                    <BookItem key={book.id} book={book} />
-                ))
+                <ul id="book-list">
+                    <li className='book-list-item'>
+                        <div className="book-name">Name</div>
+                        <div className="book-price">Price</div>
+                        <div className="book-category">Category</div>
+                        <div className='book-actions'></div>
+                    </li> 
+
+                    {books.map((book: Book) => (
+                        <BookItem key={book.id} book={book} />
+                    ))}
+                </ul>
                 :
                 <p>No books found</p>
             }
